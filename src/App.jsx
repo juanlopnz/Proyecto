@@ -5,7 +5,7 @@ import { Routes } from 'react-router'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
       <BrowserRouter>
