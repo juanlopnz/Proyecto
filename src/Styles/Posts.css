@@ -1,0 +1,43 @@
+.post__container {
+    position: absolute;
+    width: 173px;
+    height: 164.44px;
+    left: 17px;
+    top: 184px;
+    margin-bottom: 25px;
+}
+
+.post__username{
+    position: absolute;
+    width: 83px;
+    height: 32px;
+    left: 46px;
+    top: 196px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 34px;
+    align-items: center;
+    letter-spacing: 0.0038em;
+    color: #000000;
+    
+}
+
+.post_comment {
+    margin: 10px;
+}
+.post__commentbox {
+    height: 56px;
+    width: 601px;
+    border: 0px;
+    border-top: 1px solid #dbdbdb;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.post_like{
+    position: absolute;
+    width: 19px;
+    height: 21px;
+    left: 161px;
+    top: 198px;
+}

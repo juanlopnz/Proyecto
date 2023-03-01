@@ -1,0 +1,42 @@
+.title{
+    position: absolute;
+    width: 342px;
+    height: 50px;
+    left: 49px;
+    top: 93px;
+}
+
+.image{
+    position: absolute;
+    width: 131px;
+    height: 128px;
+    left: 135px;
+    top: 167px;
+
+}
+
+.info{
+    position: absolute;
+    width: 342;
+    height: 50;
+    left: 28px;
+    top: 319px;
+}
+
+.text{
+    position: absolute;
+    width: 78px;
+    left: 16px;
+    top: 32%;
+    bottom: 32%;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.25px;
+    color: #9E9E9E;
+
+}
