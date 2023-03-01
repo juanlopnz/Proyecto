@@ -5,16 +5,12 @@ import { Routes } from 'react-router'
 import { BrowserRouter, Route } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
-      <BrowserRouter>
-        <div>
-          <Routes>
-            <Route path='/Madre' element={'jjjjjj'}></Route>
-          </Routes>
-        </div>
-      </BrowserRouter>
+      <>
+        <Nav></Nav>
+      </>
   )
 }
 
