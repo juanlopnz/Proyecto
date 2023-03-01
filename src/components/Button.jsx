@@ -2,8 +2,6 @@ import React from 'react'
 
 export const Button = () => {
   return (
-    <>
-      <button type="submit"></button>
-    </>
+    <div>Button</div>
   )
 }
