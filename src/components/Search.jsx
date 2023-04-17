@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-
-
 export const Buscar = () => {
     const [username, setUsername] = useState('');
 

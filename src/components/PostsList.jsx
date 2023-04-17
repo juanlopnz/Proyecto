@@ -7,8 +7,14 @@ export const PostList = () => {
       <div className="bg-gray-100 h-screen">
         {/* Encabezado */}
         <header className="bg-white py-4 border-b border-gray-300">
-          <div className="container mx-auto px-4">
-            <h1 className="text-2xl font-semibold text-center">Aplicacion jl</h1>
+        <div className="container mx-auto px-4 flex justify-between items-center">
+            <div>
+              <FontAwesomeIcon icon={faArrowLeft} size='lg'/>
+            </div>
+            <h1 className="text-2xl font-semibold text-center">aa</h1>
+            <div>
+              <FontAwesomeIcon icon={faBars} size='lg'/>
+            </div>
           </div>
         </header>
   
