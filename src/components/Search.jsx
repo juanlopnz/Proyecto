@@ -1,12 +1,25 @@
-import "../styles/Search.css"
-import React from 'react'
+import React, { useState } from 'react';
 
-export const Search = () => {
+
+
+export const Buscar = () => {
+    const [username, setUsername] = useState('');
+
+    const handleUsernameChange = (e) => {
+        setUsername(e.target.value);
+      };
+    
   return (
-    <>
-      <label for="barra-busqueda">Buscar</label>
-      <input type="search" name="buscar" id="barra-busqueda" />
-      <button>🔍︎</button>
-    </>
+    <div className="flex items-center p-4">
+        <input
+          type="text"
+          className="flex-grow px-4 py-2 rounded-full bg-gray-200 focus:outline-none"
+          placeholder="Enter username"
+          value={username}
+          onChange={handleUsernameChange}
+        />
+      </div>
+    
   )
 }
+

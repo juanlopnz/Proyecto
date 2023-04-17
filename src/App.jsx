@@ -4,15 +4,16 @@ import './index.css'
 import { Routes } from 'react-router'
 import { BrowserRouter, Route } from 'react-router-dom'
 import { Login } from './pages/Login'
+import { ChatPage } from './pages/Chat'
 
-function App() {
+export function App() {
   // const [count, setCount] = useState(0)
 
   return (
-      <>
-        <Home></Home>
-      </>
+      
+        <Login></Login>
+      
   )
 }
 
-export default App
+
