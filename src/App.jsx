@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import './App.css'
+import './index.css'
 import { Routes } from 'react-router'
 import { BrowserRouter, Route } from 'react-router-dom'
+import { Login } from './pages/Login'
+import { ChatPage } from './pages/Chat'
 
-function App() {
+export function App() {
   // const [count, setCount] = useState(0)
 
   return (
@@ -27,4 +29,4 @@ function App() {
   )
 }
 
-export default App
+
