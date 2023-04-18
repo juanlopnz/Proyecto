@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaUser, FaSearch, FaHeart } from 'react-icons/fa';
 
-export const Navbar = () => {
+export const NavBar = () => {
   return (
     <nav className="bg-gradient-to-r from-blue-400 via-blue-300 to-blue-100 fixed bottom-0 left-0 right-0">
       <div className="container mx-auto px-20 py-2 flex justify-between items-center">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Story } from './storys';
+import { Story } from '../components/Story';
 
 export const Profile = () => {
   return (
