@@ -1,6 +1,7 @@
 import './index.css'
 import { Routes } from 'react-router'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter} from 'react-router-dom'
+import { Router } from "./Router";
 import { Login } from './pages/Login'
 import { NavBar } from './components/NavBar'
 import { Profile } from "./pages/Profile";
@@ -11,19 +12,7 @@ export function App() {
 
   return (
     <BrowserRouter>
-      
-      {/* <NavBar></NavBar> */}
-
-      {/* <Profile></Profile> */}
-
-      {/* <Followers></Followers> */}
-
-      <Home></Home>
-
-
-      {/* <Routes>
-        <Route path='/' element={<Login></Login>}></Route>
-      </Routes> */}
+      <Router></Router>
     </BrowserRouter>
   )
 }

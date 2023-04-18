@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [username, setUsername] = useState("");
@@ -15,13 +15,13 @@ export const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
   };
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-md shadow-md w-full sm:w-96">
-        <h1 className="text-3xl font-semibold text-center mb-6">Iniciar sesión</h1>
+        <h1 className="text-3xl font-semibold text-center mb-6">Tinder</h1>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -37,12 +37,15 @@ export const Login = () => {
             value={password}
             onChange={handlePasswordChange}
           />
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-300"
-          >
-            Iniciar sesión
-          </button>
+
+          <Link to='/home'>
+            <button
+              type="submit"
+              className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600 transition duration-300"
+            >
+              Iniciar Sesión
+            </button>
+          </Link>
         </form>
       </div>
     </div>

@@ -7,7 +7,7 @@ export const SideBar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false) 
 
   return (
-    <div className={sidebarOpen? "flex flex-col bg-gray-50 items-center fixed top-0 -left-0 z-40 w-64 h-screen p-4 transition-all duration-300" : "flex flex-col bg-gray-50 items-center fixed top-0 -left-64 z-40 w-64 h-screen p-4 transition-all duration-300"}>
+    <div className={sidebarOpen ? "flex flex-col bg-gray-50 items-center fixed top-0 -left-0 z-40 w-64 h-screen p-4 transition-all duration-300" : "flex flex-col bg-gray-50 items-center fixed top-0 -left-64 z-40 w-64 h-screen p-4 transition-all duration-300"}>
       <div onClick={() => setSidebarOpen(!sidebarOpen)} className='absolute left-[270px] top-5 rounded-lg hover:bg-gray-200 p-1'><SlMenu className='block text-2xl text-center'></SlMenu></div>
       <div>
         <img

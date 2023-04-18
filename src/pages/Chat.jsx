@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const ChatPage = () => {
+export const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
 
