@@ -26,6 +26,7 @@ export const EditProfile = () => {
 
   const handleAvatarChange = (e) => {
     const file = e.target.files[0];
+    
     const reader = new FileReader();
 
     reader.onloadend = () => {
