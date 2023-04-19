@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavBar } from "../components/NavBar";
 import { Story } from '../components/Story';
+import { PhotoGallery } from '../components/PhotoGallery';
 
 export const Profile = () => {
   return (
@@ -28,6 +29,9 @@ export const Profile = () => {
       </div>
       <div>
         <Story> </Story>
+      </div>
+      <div className=''>
+        <PhotoGallery></PhotoGallery>
       </div>
       <NavBar></NavBar>
     </>

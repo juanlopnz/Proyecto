@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export const CreateProfile = () => {
   const [username, setUsername] = useState('');
@@ -45,12 +46,14 @@ export const CreateProfile = () => {
           onChange={(e) => setPassword(e.target.value)}
           className="w-full mb-4 p-2 border border-gray-300 rounded"
         />
-        <button
-          type="submit"
-          className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded"
-        >
-          Crear Perfil
-        </button>
+        <Link to="/home">
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded"
+          >
+            Crear Perfil
+          </button>     
+        </Link>
       </form>
     </div>
     </div>

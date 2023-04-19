@@ -15,7 +15,6 @@ export const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
   };
 
   return (
@@ -46,6 +45,13 @@ export const Login = () => {
               Iniciar Sesión
             </button>
           </Link>
+
+          <div className="flex justify-center mt-4">
+            <span className="mr-2">¿No tienes una cuenta?</span>
+            <Link to="/register" className="text-blue-500 hover:underline">
+              Regístrate aquí
+            </Link>
+          </div>
         </form>
       </div>
     </div>
