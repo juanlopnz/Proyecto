@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const Buscar = () => {
+export const Search = () => {
     const [username, setUsername] = useState('');
 
     const handleUsernameChange = (e) => {

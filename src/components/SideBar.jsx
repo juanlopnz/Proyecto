@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const SideBar = () => {
 
-  const [sidebarOpen, setSidebarOpen] = useState(false) 
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
     <div className={sidebarOpen ? "flex flex-col bg-gray-50 items-center fixed top-0 -left-0 z-40 w-64 h-screen p-4 transition-all duration-300" : "flex flex-col bg-gray-50 items-center fixed top-0 -left-64 z-40 w-64 h-screen p-4 transition-all duration-300"}>
@@ -45,6 +45,11 @@ export const SideBar = () => {
             </Link>
           </li>
         </ul>
+      </div>
+      <div>
+        <Link className="flex items-center mt-4 w-93 h-50 font-medium text-lg leading-50 text-center text-blue-500 hover:text-blue-600 font-poppins">
+          <span className="flex-1 whitespace-nowrap">Editar Perfil</span>
+        </Link>
       </div>
     </div>
   );

@@ -1,28 +1,32 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import { FaUser, FaSearch, FaHeart } from 'react-icons/fa';
+import { Link, NavLink } from "react-router-dom";
+import { FaUser, FaSearch, FaHeart, FaHome } from 'react-icons/fa';
 
 export const NavBar = () => {
   return (
     <nav className="bg-gray-200 fixed bottom-0 left-0 right-0">
       <div className="container mx-auto px-20 py-2 flex justify-center place-items-center">
-       
+
         <ul className="flex space-x-20 items-center">
-         
           <li>
-            <Link href="/profile" className="text-black hover:text-gray-200">
+            <NavLink to="/home" className={(args) => `${args.isActive ? 'text-black' : 'text-gray-900'} ease-in-out duration-500`}>
+              <FaHome className="text-3xl" />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/profile" className={(args) => `${args.isActive ? 'text-black' : 'text-gray-900'} ease-in-out duration-500`}>
               <FaUser className="text-2xl" />
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link href="/search" className="text-black hover:text-gray-200">
+            <NavLink to="/search" className={(args) => `${args.isActive ? 'text-black' : 'text-gray-900'} ease-in-out duration-500`}>
               <FaSearch className="text-2xl" />
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link href="/likes" className="text-black hover:text-gray-200">
+            <NavLink to="/likes" className={(args) => `${args.isActive ? 'text-black' : 'text-gray-900'} ease-in-out duration-500`}>
               <FaHeart className="text-2xl" />
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

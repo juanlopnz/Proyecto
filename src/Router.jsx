@@ -4,15 +4,21 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Login } from './pages/Login';
 import { Chat } from "./pages/Chat";
+import { Profile } from "./pages/Profile";
 import { NotFoundPage } from "./pages/NotFoundPage";
+import { CreateProfile } from './pages/CreateProfile';
+import { SearchPage } from './pages/SearchPage';
 
 export const Router = () => {
   return (
     <>
       <Routes>
         <Route path='/' element={<Login></Login>}></Route>
+        <Route path='/register' element={<CreateProfile />}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/chat' element={<Chat></Chat>}></Route>
+        <Route path='/profile' element={<Profile></Profile>}></Route>
+        <Route path='/search' element={<SearchPage />}></Route>
         <Route path='*' element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
     </>
