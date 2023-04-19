@@ -9,6 +9,7 @@ import { NotFoundPage } from "./pages/NotFoundPage";
 import { CreateProfile } from './pages/CreateProfile';
 import { SearchPage } from './pages/SearchPage';
 import { Messages } from './pages/Messages';
+import { EditProfile } from './pages/EditProfile';
 
 export const Router = () => {
 
@@ -22,6 +23,7 @@ export const Router = () => {
         <Route path='/profile' element={<Profile></Profile>}></Route>
         <Route path='/search' element={<SearchPage />}></Route>
         <Route path='/messages' element={<Messages />}></Route>
+        <Route path='/edit' element={<EditProfile />}></Route>
         <Route path='*' element={<NotFoundPage></NotFoundPage>}></Route>
       </Routes>
     </>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavBar } from "../components/NavBar";
 
 export const EditProfile = () => {
   const [name, setName] = useState("");
@@ -41,43 +42,39 @@ export const EditProfile = () => {
       <h1 className="text-3xl font-bold text-center py-4 bg-white rounded-t-md">Editar perfil</h1>
       <form onSubmit={handleSubmit} className="p-4">
         <div className="mb-4">
-        <div className="flex flex-col items-center ">
-      <div className="relative">
-        <img
-          className="w-30 h-30 m-4 rounded-full cursor-pointer"
-          src={avatar}
-          alt="Profile Avatar"
-        />
-        <label
-  className="absolute bottom-0 right-0 w-8 h-8 bg-blue-500 rounded-full flex justify-center items-center cursor-pointer"
-  htmlFor="avatar"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-4 w-4 text-white"
-    viewBox="0 0 20 20"
-    fill="currentColor"
-  >
-    <path
-      fillRule="evenodd"
-      d="M15.146 3.146a2 2 0 00-2.828 0l-8 8a2 2 0 000 2.828l4 4a2 2 0 002.828 0l8-8a2 2 0 000-2.828l-4-4zM5 14.414l-2.707.293.293-2.707L11.586 6 14 8.414l-7.414 7.414z"
-      clipRule="evenodd"
-    />
-  </svg>
-  <input
-    id="avatar"
-    name="avatar"
-    type="file"
-    className="hidden"
-    onChange={handleAvatarChange}
-  />
-</label>
-
-       
-      </div>
-    </div>
-
-
+          <div className="flex flex-col items-center ">
+            <div className="relative">
+              <img
+                className="w-30 h-30 m-4 rounded-full cursor-pointer"
+                src={avatar}
+                alt="Profile Avatar"
+              />
+              <label
+                className="absolute bottom-0 right-0 w-8 h-8 bg-blue-500 rounded-full flex justify-center items-center cursor-pointer"
+                htmlFor="avatar"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-4 w-4 text-white"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M15.146 3.146a2 2 0 00-2.828 0l-8 8a2 2 0 000 2.828l4 4a2 2 0 002.828 0l8-8a2 2 0 000-2.828l-4-4zM5 14.414l-2.707.293.293-2.707L11.586 6 14 8.414l-7.414 7.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <input
+                  id="avatar"
+                  name="avatar"
+                  type="file"
+                  className="hidden"
+                  onChange={handleAvatarChange}
+                />
+              </label>
+            </div>
+          </div>
           <label className="block text-gray-700 font-bold mb-2" htmlFor="name">
             Username
           </label>
@@ -125,9 +122,10 @@ export const EditProfile = () => {
           type="submit"
           className="bg-red-500 hover:bg-blue-600 text-white font-bold py-2 px-5 rounded-md transition duration-300 mr-4"
         >
-          Cancelar 
+          Cancelar
         </button>
       </form>
+      <NavBar></NavBar>
     </div>
   );
 };
