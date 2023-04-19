@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from "react-router-dom";
 import { FaUser, FaSearch, FaHeart, FaHome } from 'react-icons/fa';
+import { TbMessageCircle2Filled } from "react-icons/tb";
 
 export const NavBar = () => {
   return (
@@ -26,6 +27,11 @@ export const NavBar = () => {
           <li>
             <NavLink to="/likes" className={(args) => `${args.isActive ? 'text-black' : 'text-gray-900'} ease-in-out duration-500`}>
               <FaHeart className="text-2xl" />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/messages" className={(args) => `${args.isActive ? 'text-black' : 'text-gray-900'} ease-in-out duration-500`}>
+              <TbMessageCircle2Filled className="text-3xl" />
             </NavLink>
           </li>
         </ul>

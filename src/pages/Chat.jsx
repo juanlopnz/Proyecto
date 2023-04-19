@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { chats } from './Messages';
+import { IoIosArrowBack } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 export const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
+  const [username, setUsername] = useState('John Doe');
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -16,9 +21,31 @@ export const Chat = () => {
     }
   };
 
+  const { id } = useParams()
+
   return (
     <div className="flex flex-col h-screen">
-      <div className="flex-grow p-8">
+      <div className="h-16 bg-gray-200 text-black flex items-center justify-between px-8">
+        <div className="flex items-center">
+          <Link to="/messages" className="bg-gray-200 hover:bg-gray-300  py-2 rounded-md">
+            <IoIosArrowBack className="text-3xl rounded-full bg-gray-300 left-0" />
+          </Link>
+          <img src={chats[id].avatar} alt={chats[id].name} className="w-10 h-10 rounded-full ml-10 mr-4" />
+          <div>
+            <h2 className="font-semibold">{chats[id].name}</h2>
+          </div>
+        </div>
+      </div>
+      <div className="flex-grow p-8 bg-gray-100">
+        <div className="flex flex-col gap-2 h-full">
+          {messages.map((message, index) => (
+            <div key={index} className="bg-gray-200 p-2 rounded-md">
+              {message}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="flex-grow p-8 bg-gray-100">
         <div className="flex flex-col gap-2 h-full">
           {messages.map((message, index) => (
             <div key={index} className="bg-gray-200 p-2 rounded-md">

@@ -40,15 +40,15 @@ export const SideBar = () => {
             </Link>
           </li>
           <li>
-            <Link className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200">
+            <Link to="/messages" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200">
               <span className="flex-1 m-0.5 text-center whitespace-nowrap">Mensajes</span>
             </Link>
           </li>
         </ul>
       </div>
       <div>
-        <Link className="flex items-center mt-4 w-93 h-50 font-medium text-lg leading-50 text-center text-blue-500 hover:text-blue-600 font-poppins">
-          <span className="flex-1 whitespace-nowrap">Editar Perfil</span>
+        <Link to="/" className="flex items-center mt-4 w-93 h-50 font-medium text-lg leading-50 text-center text-blue-500 hover:text-blue-600 font-poppins">
+          <span className="flex-1 whitespace-nowrap">Cerrar Sesion</span>
         </Link>
       </div>
     </div>
