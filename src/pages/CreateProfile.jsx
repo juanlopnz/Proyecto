@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 export const CreateProfile = () => {
   const [username, setUsername] = useState('');
-  const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Lógica para enviar los datos del perfil a través de una API o realizar otras acciones
-    console.log('Perfil creado:', { username, fullName, email, password });
+    console.log('Perfil creado:', { username, email, password, confirmPassword});
   };
 
   return (
@@ -29,21 +29,21 @@ export const CreateProfile = () => {
           type="email"
           placeholder="Gmail"
           value={fullName}
-          onChange={(e) => setFullName(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           className="w-full mb-2 p-2 border border-gray-300 rounded"
         />
         <input
           type="password"
           placeholder="Contraseña"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           className="w-full mb-2 p-2 border border-gray-300 rounded"
         />
         <input
           type="password"
           placeholder="Confirmar contraseña"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setConfirmPassword(e.target.value)}
           className="w-full mb-4 p-2 border border-gray-300 rounded"
         />
         <Link to="/home">
