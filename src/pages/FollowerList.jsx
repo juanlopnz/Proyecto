@@ -22,7 +22,7 @@ export const FollowerList = () => {
       },
       {
         name: 'Yorsh',
-        avatar: 'https://randomuser.me/api/portraits/men/11.jpg',
+        avatar: 'https://randomuser.me/api/portraits/men/11 .jpg',
       },
       {
         name: 'Lopnz',

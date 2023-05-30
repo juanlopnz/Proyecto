@@ -52,7 +52,7 @@ export const Seguidos = () => {
           placeholder="Buscar usuarios a los que sigues"
           value={searchQuery}
           onChange={handleSearchInputChange}
-          className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          className="px-1 w-60 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
         />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

@@ -31,6 +31,12 @@ export const chats = [
 ];
 
 export const Messages = () => {
+
+  
+
+
+
+
   return (
     <div className="flex flex-col w-full h-screen bg-gray-100">
       <div className="flex items-center justify-between bg-white p-4">
