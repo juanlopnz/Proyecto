@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { api } from '../../api/api';
 
 export const CreateProfile = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
+  const [confirmpassword, setConfirmpassword] = useState('');
 
   const handleSubmit = async (e) => {
     // e.preventDefault();
     // Lógica para enviar los datos del perfil a través de una API o realizar otras acciones
-    if(Password !== ConfirmPassword){
+    if(password !== confirmpassword){
       alert('Las contraseñas no coinciden')
     }
 
-    if (!Username || !Email || !ConfirmPassword || !ConfirmPassword) return;
+    if (!username || !email || !password || !confirmpassword) return;
 
     //fetch local
-    await fetch('http://localhost:4000/api/auth/new', {
-      method: 'POST',
-      body: JSON.stringify(User),
-      headers: { "Content-Type": "application/json" }
+    const { data } = await api.post('auth/new', {
+      username,
+      email,
+      password,
+      confirmpassword
     }).then(() => {
-      console.log('Perfil creado:', { Username, Email, Password, ConfirmPassword});
-    })
+      console.log('Usuario creado', data )
+    });
 
     setUsername("")
     setEmail("")
@@ -39,39 +41,39 @@ export const CreateProfile = () => {
         <input
           type="text"
           placeholder="Username"
-          value={Username}
+          value={username}
           onChange={(e) => setUsername(e.target.value)}
           className="w-full mb-2 p-2 border border-gray-300 rounded"
         />
         <input
           type="email"
           placeholder="Gmail"
-          value={Email}
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="w-full mb-2 p-2 border border-gray-300 rounded"
         />
         <input
           type="password"
           placeholder="Contraseña"
-          value={Password}
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="w-full mb-2 p-2 border border-gray-300 rounded"
         />
         <input
           type="password"
           placeholder="Confirmar contraseña"
-          value={ConfirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
+          value={confirmpassword}
+          onChange={(e) => setConfirmpassword(e.target.value)}
           className="w-full mb-4 p-2 border border-gray-300 rounded"
         />
-        <Link to="/home">
+        <div>
           <button onClick={handleSubmit}
             type="submit"
             className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded"
           >
             Crear Perfil
           </button>     
-        </Link>
+        </div>
       </form>
     </div>
     </div>
