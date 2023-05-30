@@ -1,5 +1,5 @@
 import axios from 'axios';
 
 export const api = axios.create({
-  baseURL: 'http://localhost:4000/api',
+  baseURL: 'https://tinder-api-1osi.onrender.com/api',
 });
