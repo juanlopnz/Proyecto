@@ -25,17 +25,17 @@ export const SideBar = () => {
       <div className="flex-1 h-full px-3 py-4">
         <ul className="space-y-2 font-medium">
           <li>
-            <Link to="1" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200">
+            <Link to="/likes" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200">
               <span className="flex-1 m-0.5 text-center whitespace-nowrap">Favoritos</span>
             </Link>
           </li>
           <li>
-            <Link to="1" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200">
+            <Link to="/seguidos" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200">
               <span className="flex-1 m-0.5 text-center whitespace-nowrap">Seguidos</span>
             </Link>
           </li>
           <li>
-            <Link to="1" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200">
+            <Link to="/seguidores" className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200">
               <span className="flex-1 m-0.5 text-center whitespace-nowrap">Seguidores</span>
             </Link>
           </li>
