@@ -2,14 +2,19 @@ import React from 'react';
 import { NavBar } from "../components/NavBar";
 import { Story } from '../components/Story';
 import { PhotoGallery } from '../components/PhotoGallery';
+import { SideBar } from '../components/SideBar';
 
 export const Profile = () => {
   return (
     <>
       <div className="bg-white rounded-lg shadow-md p-4">
+        <div>
+          <SideBar></SideBar>
+        </div>
+
         <div className="flex items-center">
           <img
-            className="w-16 h-16 rounded-full mr-4"
+            className="w-20 h-20 rounded-full mr-4 paddin m-9"
             src="https://via.placeholder.com/150"
             alt="Profile Avatar"
           />
