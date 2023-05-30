@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link} from 'react-router-dom';
 import { api } from '../../api/api';
 
 export const CreateProfile = () => {
@@ -8,8 +8,10 @@ export const CreateProfile = () => {
   const [password, setPassword] = useState('');
   const [confirmpassword, setConfirmpassword] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     // Lógica para enviar los datos del perfil a través de una API o realizar otras acciones
     if(password !== confirmpassword){
       alert('Las contraseñas no coinciden')
@@ -18,24 +20,25 @@ export const CreateProfile = () => {
     if (!username || !email || !password || !confirmpassword) return;
 
     //fetch local
-    const { data } = await api.post('auth/new', {
+    await api.post('auth/new', {
       username,
       email,
       password,
       confirmpassword
     }).then(() => {
-      console.log('Usuario creado', data )
+      console.log('Usuario creado')
+      navigate('/home')
     });
 
     setUsername("")
     setEmail("")
     setPassword("")
-    setConfirmPassword("")
+    setConfirmpassword("")
   };
 
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
-    <div className="bg-white rounded-lg shadow-md p-4 max-w-xs mx-auto">
+    <div className="bg-white rounded-mg shadow-md p-8 w-full sm:w-96">
       <h2 className="text-3xl font-semibold text-center mb-6">Crear Perfil</h2>
       <form>
         <input
@@ -72,7 +75,13 @@ export const CreateProfile = () => {
             className="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded"
           >
             Crear Perfil
-          </button>     
+          </button> 
+          <div className="flex justify-center mt-4">
+            <span className="mr-2">¿Ya tienes una cuenta?</span>
+            <Link to="/" className="text-blue-500 hover:underline">
+              Inicia Sesión aquí
+            </Link>
+          </div>    
         </div>
       </form>
     </div>

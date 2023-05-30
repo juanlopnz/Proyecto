@@ -1,21 +1,24 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../api/api";
 
 export const Login = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!username || !password) return;
+    if (!email || !password) return;
 
     await api.post('auth/', {
-      username,
+      email,
       password
     }).then(() => {
       console.log('Usuario encontrado')
+      navigate('/home')
     });
 
     setUsername("");
@@ -25,14 +28,14 @@ export const Login = () => {
   return (
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-md shadow-md w-full sm:w-96">
-        <h1 className="text-3xl font-semibold text-center mb-6">Tinder</h1>
+        <h1 className="text-3xl font-semibold text-center mb-6">SocialBasic</h1>
         <form>
           <input
             type="text"
             className="w-full px-4 py-2 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Nombre de usuario"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Correo electrónico o Usuario"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
             type="password"
