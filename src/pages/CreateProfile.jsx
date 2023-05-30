@@ -2,30 +2,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const CreateProfile = () => {
-  const [Username, setUsername] = useState('');
-  const [Email, setEmail] = useState('');
-  const [Password, setPassword] = useState('');
-  const [ConfirmPassword, setConfirmPassword] = useState('');
-  const [User, setUser] = useState({});
-
-  const handleUsername = (Username) => {
-    setUsername(Username)
-    setUser({ ...User, Username: Username })
-  }
-  const handleEmail = (Email) => {
-    setEmail(Email)
-    setUser({ ...User, Email: Email })
-  }
-  const handlePassword = (Password) => {
-    setPassword(Password)
-    setUser({ ...User, Password: Password })
-  }
-  const handleConfirmPassword = (ConfirmPassword) => {
-    setConfirmPassword(ConfirmPassword)
-  } 
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // Lógica para enviar los datos del perfil a través de una API o realizar otras acciones
     if(Password !== ConfirmPassword){
       alert('Las contraseñas no coinciden')
@@ -57,28 +40,28 @@ export const CreateProfile = () => {
           type="text"
           placeholder="Username"
           value={Username}
-          onChange={(e) => handleUsername(e.target.value)}
+          onChange={(e) => setUsername(e.target.value)}
           className="w-full mb-2 p-2 border border-gray-300 rounded"
         />
         <input
           type="email"
           placeholder="Gmail"
           value={Email}
-          onChange={(e) => handleEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           className="w-full mb-2 p-2 border border-gray-300 rounded"
         />
         <input
           type="password"
           placeholder="Contraseña"
           value={Password}
-          onChange={(e) => handlePassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           className="w-full mb-2 p-2 border border-gray-300 rounded"
         />
         <input
           type="password"
           placeholder="Confirmar contraseña"
           value={ConfirmPassword}
-          onChange={(e) => handleConfirmPassword(e.target.value)}
+          onChange={(e) => setConfirmPassword(e.target.value)}
           className="w-full mb-4 p-2 border border-gray-300 rounded"
         />
         <Link to="/home">
