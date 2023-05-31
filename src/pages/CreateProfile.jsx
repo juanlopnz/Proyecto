@@ -11,8 +11,8 @@ export const CreateProfile = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Lógica para enviar los datos del perfil a través de una API o realizar otras acciones
+    //e.preventDefault();
+    
     if(password !== confirmpassword){
       alert('Las contraseñas no coinciden')
     }

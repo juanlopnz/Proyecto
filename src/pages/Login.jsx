@@ -9,7 +9,7 @@ export const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    //e.preventDefault();
 
     if (!email || !password) return;
 
