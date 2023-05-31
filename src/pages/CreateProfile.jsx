@@ -37,7 +37,7 @@ export const CreateProfile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (password.length < 6 || confirmPassword !== password) {
+    if (password.length < 6 || confirmpassword !== password) {
       return;
     }
 
@@ -79,7 +79,7 @@ export const CreateProfile = () => {
           <input
             type="email"
             placeholder="Gmail"
-            value={fullName}
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full mb-2 p-2 border border-gray-300 rounded"
           />
@@ -96,7 +96,7 @@ export const CreateProfile = () => {
           <input
             type="password"
             placeholder="Confirmar contraseña"
-            value={confirmPassword}
+            value={confirmpassword}
             onChange={handleConfirmPasswordChange}
             className="w-full mb-4 p-2 border border-gray-300 rounded"
           />
