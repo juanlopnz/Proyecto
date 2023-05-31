@@ -13,6 +13,7 @@ import { EditProfile } from './pages/EditProfile';
 import { FavoritesPage } from './pages/Favorites';
 import { FollowerList } from './pages/FollowerList';
 import { Seguidos } from './pages/Seguidos';
+import { UpPost } from './components/UpPost';
 
 export const Router = () => {
 
@@ -30,6 +31,7 @@ export const Router = () => {
         <Route path='/likes' element={<FavoritesPage></FavoritesPage>}></Route>
         <Route path='/seguidores' element={<FollowerList></FollowerList>}></Route>
         <Route path='/seguidos' element={<Seguidos></Seguidos>}></Route>
+        <Route path='123' element={<UpPost></UpPost>}></Route>
 
         <Route path='*' element={<NotFoundPage></NotFoundPage>}></Route>
      
