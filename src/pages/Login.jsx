@@ -21,7 +21,7 @@ export const Login = () => {
       navigate('/home')
     });
 
-    setUsername("");
+    setEmail("");
     setPassword("");  
   };
 
