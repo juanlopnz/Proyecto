@@ -11,7 +11,7 @@ export const CreateProfile = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     
     if(password !== confirmpassword){
       alert('Las contraseñas no coinciden')
