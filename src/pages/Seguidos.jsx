@@ -1,3 +1,2 @@
-export const Seguidos = ()=>{
 
-}
+export const Seguidos = ()=>{

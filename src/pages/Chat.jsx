@@ -8,6 +8,7 @@ export const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [username, setUsername] = useState('John Doe');
+  const [filteredChats, setFilteredChats]= useState(chats);
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
@@ -20,6 +21,10 @@ export const Chat = () => {
       setInputValue('');
     }
   };
+
+  const handleSearch =()=>{
+    const filtered = chats.filter(chat=>chat.name.toLowerCase().includes)
+  }
 
   const { id } = useParams()
 
