@@ -1,23 +1,39 @@
 import React, { useState } from 'react';
+import { useFirebaseStorage } from '../hooks/useFirebaseStorage';
 
 export const UpPost = ({ onSubirPost }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
-  const [image, setImage] = useState();
+  const [image, setImage] = useState(null);
+  const { uploadImage, uploadProgress } = useFirebaseStorage();
 
-  const handleSubmit = (e) => {
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    setImage(file);
+  };
+
+  const handleSubmit = async (e) => {
 
     const post = {
       title,
       description,
-      image
+      image: null
     };
 
-    onSubirPost(post);
+    try {
+      if (image) {
+        const downloadURL = await uploadImage(image);
+        post.image = downloadURL;
+      }
 
-    setTitle('');
-    setDescription('');
-    setImage();
+      onSubirPost(post);
+
+      setTitle('');
+      setDescription('');
+      setImage(null);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
@@ -49,16 +65,17 @@ export const UpPost = ({ onSubirPost }) => {
             <input
               type="file"
               id="imagen"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
+              onChange={handleFileChange}
               className="border border-gray-300 rounded-md px-3 py-2 w-full"
             />
           </div>
-          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">Subir</button>
+          {uploadProgress > 0 && <p>Progreso de subida: {uploadProgress}%</p>}
+          <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-md">
+            Subir
+          </button>
         </form>
       </div>
     </div>
-  );
+  )
 };
-
 
