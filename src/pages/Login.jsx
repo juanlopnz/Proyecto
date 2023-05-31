@@ -33,7 +33,7 @@ export const Login = () => {
           <input
             type="text"
             className="w-full px-4 py-2 border border-gray-300 rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Correo electrónico o Usuario"
+            placeholder="Correo electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
