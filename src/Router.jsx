@@ -13,6 +13,7 @@ import { EditProfile } from './pages/EditProfile';
 import { FavoritesPage } from './pages/Favorites';
 import { FollowerList } from './pages/FollowerList';
 import { Seguidos } from './pages/Seguidos';
+import { UpPost } from './components/UpPost';
 
 export const Router = () => {
 
